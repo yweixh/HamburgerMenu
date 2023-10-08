@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="NavigationTry.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:NavigationTry"
+    Shell.FlyoutBehavior="Flyout">
+
+    <Shell.FlyoutHeader>
+        <VerticalStackLayout>
+            <Label Text="Menu"
+                   FontSize="20"
+                   HorizontalTextAlignment="Center"
+                   HeightRequest="40"></Label>
+        </VerticalStackLayout>
+    </Shell.FlyoutHeader>
+    
+    <FlyoutItem Title="Home Page">
+        <ShellContent
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="MainPage" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Profile">
+        <ShellContent
+            ContentTemplate="{DataTemplate local:ProfileView}" />
+    </FlyoutItem>
+
+</Shell>
